@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .master-operators {
+      display: flex;
+      height: 600px;
+    }
+    .master-container {
+      flex: 1;
+      background: #b6deea54;
+      border: 1px solid deepskyblue;
+    }
+    #master, #operators-palette {
+      width: 100%;
+      height: 100%;
+    }
+    .operators-container {
+      margin-left: 15px;
+      flex-basis: 12%;
+      background: lightblue;
+      border: 1px solid deepskyblue;
+    }
+    .operators-container p {
+      text-align: center;
+      letter-spacing: 2px;
+      background: #fff;
+      padding: 10px 0;
+    }
+    .palette-container {
+      display: flex;
+
+      height: 100px;
+      margin-top: 15px;
+      padding: 15px 10px;
+      background: lightblue;
+      border: 1px solid deepskyblue;
+    }
+    #numbers-palette {
+      width: 750px;
+      border-right: 1px solid white
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid mt-4">
+    <div class="master-operators">
+      <div class="master-container">
+        <div id="master"></div>
+      </div>
+      <div class="operators-container">
+        <p>Operators</p>
+        <div id="operators-palette"></div>
+      </div>
+    </div>
+    <div class="palette-container">
+      <div id="numbers-palette"></div>
+      <div style="flex: 1; text-align: center; align-self: center;">
+        <span style="font-family: monospace;">Result: </span>
+        <p style="font-size: 1.8rem; font-family: monospace; color: red;" id="calc_result">0</p>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+<script src="./index.js"></script>
+</html>
